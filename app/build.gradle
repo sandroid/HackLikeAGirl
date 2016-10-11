@@ -37,8 +37,5 @@ dependencies {
         exclude module: 'retrofit2'
     }
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
-
-
-
-
+    compile 'javax.annotation:javax.annotation-api:1.2'
 }
