@@ -1,7 +1,7 @@
 package com.nike.hacklikeagirl.network;
 
 
-import com.nike.mynike.model.generated.commerce.SwooshLoginResponse;
+import org.json.JSONObject;
 
 import retrofit2.Response;
 import retrofit2.http.Field;
@@ -48,7 +48,7 @@ public interface WeatherNetworkAPI
     })
     @FormUrlEncoded
     @POST("http://api.openweathermap.org/data/2.5/weather?zip=94040,us&APPID=da0578f96b2dbb5b4c4f0d87f0eb1aa3")
-    Observable<Response<SwooshLoginResponse>> swooshLoginObservable(
+    Observable<Response<JSONObject>> swooshLoginObservable(
             @Path("country") String country,
             @Query("login") String login,
             @Query("password") String password,
