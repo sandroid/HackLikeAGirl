@@ -14,5 +14,11 @@
         tools:showIn="@layout/app_bar_main"
         tools:context="com.nike.hacklikeagirl.ui.MainActivity">
 
+    <FrameLayout
+            android:id="@+id/flContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    </FrameLayout>
+
 
 </RelativeLayout>

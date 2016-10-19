@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_register) {
-            this.startActivity(new Intent(this,  RegistrationActivity.class));
+            fragment = RegistrationFragment.newInstance();
         } else if (id == R.id.nav_map) {
             this.startActivity(new Intent(this,  MapsActivity.class));
 
