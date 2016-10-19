@@ -14,9 +14,5 @@
         tools:showIn="@layout/app_bar_main"
         tools:context="com.nike.hacklikeagirl.ui.MainActivity">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Clear your calendar! Nike and Puppet are collaborating to host the 2nd We Code Hackathon for women and friends. Web designers and developers of all levels are invited to work on a fun project in small teams at this creative and collaborative coding event. You’ll have an opportunity to meet and work with other talented people, develop your skills, and create new applications. T-shirts, prizes, and great food from local restaurants will be provided."
-    />
+
 </RelativeLayout>

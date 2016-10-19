@@ -5,8 +5,8 @@ import com.nike.hacklikeagirl.R;
 import com.nike.hacklikeagirl.network.WeatherNao;
 import com.nike.mynike.model.generated.Weather;
 
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
