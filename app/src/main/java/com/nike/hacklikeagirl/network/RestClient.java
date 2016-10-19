@@ -14,6 +14,7 @@ import java.io.IOException;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
@@ -37,7 +38,7 @@ public final class RestClient {
     private static Cache sCache;
     private static Gson sGson;
 
-    private static WeatherNetworkAPI sSwooshClient;
+    private static WeatherNetworkAPI sWeatherClient;
 
 
     private RestClient() {
@@ -59,17 +60,16 @@ public final class RestClient {
 
     static WeatherNetworkAPI getWeather(Context context)
             {
-        if (sSwooshClient == null) {
+        if (sWeatherClient == null) {
             synchronized (RestClient.class) {
-                if (sSwooshClient == null) {
-//                    sSwooshClient = getJsonNoAuthRxRetrofit(context,
-//                            EnvironmentManager.getCurrentEnvironment(context)
-//                                    .getSecureStoreDomain())
-//                            .create(WeatherNetworkAPI.class);
+                if (sWeatherClient == null) {
+                    sWeatherClient = getJsonNoAuthRetrofit(context,
+                            "http://api.openweathermap.org")
+                            .create(WeatherNetworkAPI.class);
                 }
             }
         }
-        return sSwooshClient;
+        return sWeatherClient;
     }
 
     /**
@@ -77,11 +77,11 @@ public final class RestClient {
      */
     private static Retrofit getJsonNoAuthRetrofit(Context context, String baseUrl) {
         return new Retrofit.Builder()
-                .baseUrl(baseUrl)
-                .addConverterFactory(GsonConverterFactory.create(getGson()))
-                .client(getJsonNoOAuthClient(context))
-//                .callbackExecutor(NetworkExecutor.NETWORK)
-                .build();
+            .baseUrl(baseUrl)
+            .addConverterFactory(GsonConverterFactory.create(getGson()))
+            .client(getJsonNoOAuthClient(context))
+            .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+            .build();
     }
 
 
