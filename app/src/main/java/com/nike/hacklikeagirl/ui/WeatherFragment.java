@@ -7,12 +7,17 @@ import com.nike.mynike.model.generated.Weather;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import rx.Observable;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Action1;
+import rx.schedulers.Schedulers;
+
+import static com.google.android.gms.plus.PlusOneDummyView.TAG;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,10 +63,26 @@ public class WeatherFragment extends Fragment {
             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_weather, container, false);
         String zipCode = getArguments().getString(ZIP_CODE);
-        TextView weather = (TextView)view.findViewById(R.id.weather);
-        Observable<Weather> weatherObservable =  WeatherNao.getWeather(getActivity(),
-                zipCode);
-        weather.setText(weatherObservable.toString());
+        final TextView weather = (TextView)view.findViewById(R.id.weather);
+
+        WeatherNao.getWeather(getActivity(), zipCode)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Action1<Weather>() {
+                    @Override
+                    public void call(Weather weatherResponse) {
+
+                        if (weatherResponse != null) {
+                            weather.setText(weatherResponse.getName());
+                        }
+
+                    }
+                }, new Action1<Throwable>() {
+                    @Override
+                    public void call(Throwable throwable) {
+                        Log.d(TAG, throwable.toString());
+                    }
+                });
 
         return view;
 
