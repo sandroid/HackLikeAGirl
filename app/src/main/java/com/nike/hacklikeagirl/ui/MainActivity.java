@@ -4,7 +4,6 @@ import com.nike.hacklikeagirl.R;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -92,7 +91,8 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_register) {
             fragment = RegistrationFragment.newInstance();
         } else if (id == R.id.nav_map) {
-            this.startActivity(new Intent(this,  MapsActivity.class));
+//            this.startActivity(new Intent(this,  MapsActivity.class));
+            fragment = MyMapFragment.newInstance("", "");
 
         } else if (id == R.id.nav_information) {
 
