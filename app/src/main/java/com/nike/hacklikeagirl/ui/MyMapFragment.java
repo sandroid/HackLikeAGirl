@@ -9,12 +9,17 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.io.IOException;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -98,11 +103,33 @@ public class MyMapFragment extends Fragment implements OnMapReadyCallback {
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
+
+        List<Address> addressList = null;
+
+        Geocoder geocoder = new Geocoder(getActivity());
+        double latitude = 0;
+        double longitude = 0;
+
+        try {
+            List<Address> geoResults = geocoder.getFromLocationName("<address goes here>", 1);
+            while (geoResults.size()==0) {
+                geoResults = geocoder.getFromLocationName("308 SW 2nd Ave., Portland, OR", 1);
+            }
+            if (geoResults.size()>0) {
+                Address addr = geoResults.get(0);
+                latitude = addr.getLatitude();
+                longitude = addr.getLongitude();
+            }
+        } catch (Exception e) {
+            System.out.print(e.getMessage());
+        }
+
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        LatLng sydney = new LatLng(latitude, longitude);
+        mMap.addMarker(new MarkerOptions().position(sydney).title(getResources()
+                .getString(R.string.map_marker)));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 }

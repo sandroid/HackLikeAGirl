@@ -21,9 +21,7 @@
         email completions."
     </string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="weather_fragment">Hello blank fragment</string>
+    <!-- Strings for map -->
+    <string name="map_marker">Nike Hackathon Location</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
