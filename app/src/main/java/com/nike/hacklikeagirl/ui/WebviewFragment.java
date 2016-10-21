@@ -36,6 +36,10 @@ public class WebviewFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_webview, container, false);
 
         mWebView = (WebView) view.findViewById(R.id.webview);
+        mWebView.setInitialScale(1);
+        mWebView.getSettings().setLoadWithOverviewMode(true);
+        mWebView.getSettings().setUseWideViewPort(true);
+        mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.loadUrl("https://wecode-nov2016s.splashthat.com/#settings");
 
         // Enable Javascript
