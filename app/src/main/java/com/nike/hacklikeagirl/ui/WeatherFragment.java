@@ -63,7 +63,9 @@ public class WeatherFragment extends Fragment {
             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_weather, container, false);
         String zipCode = getArguments().getString(ZIP_CODE);
-        final TextView weather = (TextView)view.findViewById(R.id.weather);
+        final TextView name = (TextView)view.findViewById(R.id.name);
+        final TextView description = (TextView)view.findViewById(R.id.description);
+        final TextView temp = (TextView)view.findViewById(R.id.temp);
 
         WeatherNao.getWeather(getActivity(), zipCode)
                 .subscribeOn(Schedulers.io())
@@ -73,7 +75,10 @@ public class WeatherFragment extends Fragment {
                     public void call(Weather weatherResponse) {
 
                         if (weatherResponse != null) {
-                            weather.setText(weatherResponse.getName());
+                            name.setText(weatherResponse.getName());
+                            description.setText(weatherResponse.getWeather().get(0).getDescription());
+                            temp.setText(String.valueOf(weatherResponse.getMain()
+                                    .getTemp()));
                         }
 
                     }
