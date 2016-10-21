@@ -21,5 +21,5 @@ public interface WeatherNetworkAPI
             "Accept-Charset: utf-8",
     })
     @GET("http://api.openweathermap.org/data/2.5/weather?us&APPID=da0578f96b2dbb5b4c4f0d87f0eb1aa3")
-    Observable<Response<Weather>> getWeather(@Query("zipCode") String zipCode);
+    Observable<Response<Weather>> getWeather(@Query("zip") String zipCode);
 }

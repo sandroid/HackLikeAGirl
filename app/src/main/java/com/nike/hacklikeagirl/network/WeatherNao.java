@@ -30,7 +30,7 @@ public final class WeatherNao {
      * @param zipCode
      */
     public static Observable<Weather> getWeather(Context context, String zipCode) {
-        return RestClient.getWeather(context)
+        return RestClient.getWeatherNetworkApi(context)
                 .getWeather(zipCode)
                 .flatMap(new Func1<Response<Weather>, Observable<Weather>>() {
                     @Override
