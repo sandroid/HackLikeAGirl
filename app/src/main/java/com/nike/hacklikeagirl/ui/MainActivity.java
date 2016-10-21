@@ -91,11 +91,9 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_register) {
             fragment = RegistrationFragment.newInstance();
         } else if (id == R.id.nav_map) {
-//            this.startActivity(new Intent(this,  MapsActivity.class));
             fragment = MyMapFragment.newInstance("", "");
-
         } else if (id == R.id.nav_information) {
-
+            fragment = WebviewFragment.newInstance();
 
         } else if (id == R.id.nav_weather) {
             fragment = WeatherFragment.newInstance("97007");
