@@ -2,6 +2,7 @@ package com.nike.hacklikeagirl.ui;
 
 import com.nike.hacklikeagirl.R;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -18,8 +19,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.io.IOException;
 import java.util.List;
+
+import static com.nike.hacklikeagirl.R.id.map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -82,7 +84,7 @@ public class MyMapFragment extends Fragment implements OnMapReadyCallback {
         View view = inflater.inflate(R.layout.fragment_mymap, container, false);
         FragmentManager fragmentManager = getChildFragmentManager();
         SupportMapFragment supportMapFragment = (SupportMapFragment) fragmentManager
-                .findFragmentById(R.id.map);
+                .findFragmentById(map);
         supportMapFragment.getMapAsync(this);
 
         return view;
@@ -103,8 +105,6 @@ public class MyMapFragment extends Fragment implements OnMapReadyCallback {
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
-
-        List<Address> addressList = null;
 
         Geocoder geocoder = new Geocoder(getActivity());
         double latitude = 0;
@@ -127,9 +127,10 @@ public class MyMapFragment extends Fragment implements OnMapReadyCallback {
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(latitude, longitude);
-        mMap.addMarker(new MarkerOptions().position(sydney).title(getResources()
+        LatLng hackathon = new LatLng(latitude, longitude);
+        mMap.addMarker(new MarkerOptions().position(hackathon).title(getResources()
                 .getString(R.string.map_marker)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(hackathon));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(12));
     }
 }
