@@ -3,8 +3,11 @@ package com.nike.hacklikeagirl.ui;
 
 import com.nike.hacklikeagirl.R;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,10 +20,16 @@ import android.webkit.WebViewClient;
  */
 public class WebviewFragment extends Fragment {
 
+    public static final String TITLE = "title";
+    public static final String COLOR = "color";
     private WebView mWebView;
 
-    public static WebviewFragment newInstance() {
+    public static WebviewFragment newInstance(String title, String color) {
         WebviewFragment fragment = new WebviewFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString(TITLE, title);
+        bundle.putString(COLOR, color);
+        fragment.setArguments(bundle);
         return fragment;
     }
 
@@ -34,6 +43,12 @@ public class WebviewFragment extends Fragment {
             Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_webview, container, false);
+
+        getActivity().setTitle(getArguments().getString(TITLE));
+
+
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color
+                .parseColor(getArguments().getString(COLOR))));
 
         mWebView = (WebView) view.findViewById(R.id.webview);
         mWebView.setInitialScale(1);

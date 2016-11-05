@@ -1,5 +1,6 @@
 package com.nike.hacklikeagirl.ui;
 
+import com.nike.hacklikeagirl.Constants;
 import com.nike.hacklikeagirl.R;
 
 import android.os.Bundle;
@@ -104,20 +105,15 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_stats) {
-            fragment = RegistrationFragment.newInstance();
+            fragment = WebviewFragment.newInstance(getResources().getString(R.string.activity_stats), Constants.BLUE);
         } else if (id == R.id.nav_activity) {
-            fragment = MyMapFragment.newInstance("", "");
+            fragment = WebviewFragment.newInstance(getResources().getString(R.string.activity_log), Constants.GREEN);
         } else if (id == R.id.nav_food) {
-            fragment = WebviewFragment.newInstance();
-
+            fragment = WebviewFragment.newInstance(getResources().getString(R.string.food), Constants.YELLOW);
+        } else if (id == R.id.nav_market) {
+            fragment = WebviewFragment.newInstance(getResources().getString(R.string.market), Constants.ORANGE);
         } else if (id == R.id.nav_friends) {
-            fragment = WeatherFragment.newInstance("97007");
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-
-//        } else if (id == R.id.nav_video) {
-//            FullScreenThreadVideoActivity.navigate(this, "http://cdn-vod-a.sesameonline.net/pd/p/1786071/sp/178607100/serveFlavor/entryId/0_dm4qkb4e/v/2/pv/1/flavorId/0_t7iwesxn/name/a.mp4", true);
+            fragment = WebviewFragment.newInstance(getResources().getString(R.string.friends), Constants.SALMON);
         }
 
         if (fragment != null) {
