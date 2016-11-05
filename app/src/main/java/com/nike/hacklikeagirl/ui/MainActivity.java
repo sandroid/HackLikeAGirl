@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity
     private static final String ACTIVITY_URL = "http://wecode2016.stumptownsarah.com/food.html";
     private static final String FOOD_URL = "http://wecode2016.stumptownsarah.com/food.html";
     private static final String MARKET_URL = "http://wecode2016.stumptownsarah.com/food.html";
-    private static final String FRIEDS_URL = "http://wecode2016.stumptownsarah.com/food.html";
+    private static final String FRIEDS_URL = "http://wecode2016.stumptownsarah.com/leaderboard.html";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
