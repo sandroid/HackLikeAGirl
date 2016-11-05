@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="horizontal"
               android:layout_width="match_parent"
-                android:background="#004358"
+                android:background="#ffe11a"
                 android:id="@+id/custom_menu_item"
                 android:layout_height="50dp">
 
@@ -25,7 +25,7 @@
               android:textSize="24sp"
               android:textColor="#ffffff"
               android:layout_toRightOf="@id/icon"
-              android:text="Register"
+              android:text="Friends"
               android:gravity="center"/>
 
 

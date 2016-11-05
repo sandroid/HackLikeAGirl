@@ -19,8 +19,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -75,13 +73,10 @@ public class MainActivity extends AppCompatActivity
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         // Inflate your custom view.
-        LinearLayout registerView = (LinearLayout)baseInflater.inflate(R.layout.custom_menu_item, null);
-        TextView registerText = (TextView) registerView.findViewById(R.id.menu_title);
-        registerText.setText("Register");
-        View colorBar = findViewById(R.id.menu_color_bar);
-//        colorBar.setBackgroundColor(getResources().getColor(R.color.orange));
-        MenuItem register = menu.findItem(R.id.nav_register).setActionView(registerView);
-
+//        RelativeLayout registerView = (RelativeLayout)baseInflater.inflate(R.layout.custom_menu_item, null);
+//        TextView registerText = (TextView) registerView.findViewById(R.id.custom_menu_title);
+//        registerText.setText("Register");
+//        menu.findItem(R.id.nav_register).setActionView(registerView);
 
         // If myCustomView has additional children, you might have to inflate them separately here.
         // In my case, I used buttons in my custom view, and registered onClick listeners at this point.
