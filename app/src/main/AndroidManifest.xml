@@ -53,6 +53,8 @@
         </activity>
         <activity android:name=".ui.WebviewActivity">
         </activity>
+        <activity android:name=".ui.FullScreenThreadVideoActivity">
+        </activity>
     </application>
 
 </manifest>

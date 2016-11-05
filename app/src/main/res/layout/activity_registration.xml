@@ -47,7 +47,7 @@
             android:layout_marginStart="24dp"
             app:layout_constraintLeft_toRightOf="@+id/first_name"/>
     <EditText
-            android:layout_width="337dp"
+            android:layout_width="0dp"
             android:layout_height="41dp"
             android:inputType="textEmailAddress"
             android:ems="10"
@@ -58,7 +58,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             android:hint="Email Address"/>
     <EditText
-            android:layout_width="315dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
@@ -88,7 +88,7 @@
             android:layout_marginStart="24dp"
             app:layout_constraintLeft_toLeftOf="parent"/>
     <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
@@ -132,7 +132,7 @@
 
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/dev_type"
-                android:layout_width="fill_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintTop_toBottomOf="@+id/textView14"

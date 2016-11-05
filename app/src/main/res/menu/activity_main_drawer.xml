@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <group android:checkableBehavior="single">
         <item
                 android:id="@+id/nav_register"
-                android:icon="@drawable/ic_border_color_black_24dp"
-                android:title="Register"/>
+                app:actionLayout="@layout/custom_menu_item"/>
         <item
-                android:id="@+id/nav_map"
+                android:id="@+id/nav_records"
                 android:icon="@drawable/ic_map_black_24dp"
-                android:title="Map"/>
+                android:tint="#bedb39"
+                android:title="Activity Records"/>
         <item
-                android:id="@+id/nav_information"
+                android:id="@+id/nav_food"
                 android:icon="@drawable/ic_menu_slideshow"
-                android:title="Information"/>
+                android:tint="#1f8a70"
+                android:title="Food"/>
         <item
-                android:id="@+id/nav_weather"
+                android:id="@+id/nav_friends"
                 android:icon="@drawable/ic_menu_manage"
-                android:title="Weather"/>
+                android:tint="#ffe11a"
+                android:title="Friends"/>
+        <item
+                android:id="@+id/nav_rewards"
+                android:icon="@drawable/ic_menu_manage"
+                android:tint="#FD7400"
+                android:title="Rewards"/>
+        <item
+                android:id="@+id/nav_video"
+                android:icon="@drawable/ic_menu_manage"
+                android:tint="#FD7400"
+                android:title="Video"/>
     </group>
 
     <item android:title="Communicate">
