@@ -7,14 +7,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 /**
  */
 public class LandingPageFragment extends Fragment {
 
     private static final int PLUS_ONE_REQUEST_CODE = 0;
-    private Button mVideoButton;
+    private ImageButton mVideoButton;
 
 
     public LandingPageFragment() {
@@ -45,7 +45,7 @@ public class LandingPageFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_landing_page, container, false);
 
         //Find the +1 button
-        mVideoButton = (Button) view.findViewById(R.id.video1);
+        mVideoButton = (ImageButton) view.findViewById(R.id.video1);
         mVideoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

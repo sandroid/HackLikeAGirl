@@ -15,16 +15,15 @@
         android:gravity="bottom">
 
     <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/nav_header_vertical_spacing"
-            app:srcCompat="@drawable/follow_me_large"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:srcCompat="@drawable/follow_me_huge"
+            android:layout_marginTop="20dp"
             android:id="@+id/imageView"/>
 
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="@dimen/nav_header_vertical_spacing"
             android:text="Rockadoodle"
             android:textColor="#ffffff"
             android:textStyle="bold"

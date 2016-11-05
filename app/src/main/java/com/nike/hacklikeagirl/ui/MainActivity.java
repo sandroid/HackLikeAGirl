@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String STATS_URL = "http://wecode2016.stumptownsarah.com/food.html";
-    private static final String ACTIVITY_URL = "http://wecode2016.stumptownsarah.com/food.html";
+    private static final String ACTIVITY_URL = "http://wecode2016.stumptownsarah.com/ActivityPage.html";
     private static final String FOOD_URL = "http://wecode2016.stumptownsarah.com/food.html";
     private static final String MARKET_URL = "http://wecode2016.stumptownsarah.com/food.html";
     private static final String FRIEDS_URL = "http://wecode2016.stumptownsarah.com/leaderboard.html";
