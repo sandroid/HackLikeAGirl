@@ -51,6 +51,11 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.flContent, LandingPageFragment.newInstance());
+        ft.commit();
+
     }
 
     @Override
@@ -62,29 +67,6 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        super.onCreateOptionsMenu(menu);
-//
-//        // Inflate the menu items for use in the action bar
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.activity_main_drawer, menu);
-//
-//        // Get the root inflator.
-//        LayoutInflater baseInflater = (LayoutInflater)getBaseContext()
-//                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//
-//        // Inflate your custom view.
-////        RelativeLayout registerView = (RelativeLayout)baseInflater.inflate(R.layout.custom_menu_item, null);
-////        TextView registerText = (TextView) registerView.findViewById(R.id.custom_menu_title);
-////        registerText.setText("Register");
-////        menu.findItem(R.id.nav_register).setActionView(registerView);
-//
-//        // If myCustomView has additional children, you might have to inflate them separately here.
-//        // In my case, I used buttons in my custom view, and registered onClick listeners at this point.
-//        return true;
-//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
