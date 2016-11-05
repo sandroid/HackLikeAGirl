@@ -47,8 +47,6 @@ public class WebviewFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_webview, container, false);
 
         getActivity().setTitle(getArguments().getString(TITLE));
-
-
         ((AppCompatActivity)getActivity()).getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color
                 .parseColor(getArguments().getString(COLOR))));
 
