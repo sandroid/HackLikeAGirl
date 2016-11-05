@@ -67,7 +67,7 @@ public class LandingPageFragment extends Fragment {
         mVideoButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FullScreenThreadVideoActivity.navigate(getActivity(), "http:\\/\\/www.dailymotion.com\\/cdn\\/H264-320x240\\/video\\/x1na8l6.mp4?auth=1478550444-2688-33km3r50-ec6c6b46edd828f31362e7db24fbd924", true);
+                FullScreenThreadVideoActivity.navigate(getActivity(), "http://video.cdn.schooltube.com/09d9f05c-d4df-424f-ba13-0898da2f157f/v/11/cf/bd/cc/f5/af/11cfbdcc-f5af-8be7-e6c7-9b6bafe576ca.mp4", true);
             }
         });
 

@@ -27,6 +27,7 @@
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/diet"
                 android:src="@drawable/ic_video_play"
+                android:tint="@color/blue"
                 android:layout_margin="20dp"
         />
         <ImageButton
@@ -34,8 +35,9 @@
                 android:layout_width="120dp"
                 android:layout_height="90dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/veggie_video"
+                android:background="@drawable/biking"
                 android:src="@drawable/ic_video_play"
+                android:tint="@color/blue"
                 android:layout_margin="20dp"
         />
         <ImageButton
@@ -43,8 +45,9 @@
                 android:layout_width="120dp"
                 android:layout_height="90dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/veggie_video"
+                android:background="@drawable/kidexc"
                 android:src="@drawable/ic_video_play"
+                android:tint="@color/blue"
                 android:layout_margin="20dp"
         />
 

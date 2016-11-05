@@ -18,7 +18,7 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             app:srcCompat="@drawable/bird"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:id="@+id/imageView"/>
 
     <TextView
@@ -30,10 +30,5 @@
             android:textSize="36dp"
     />
 
-    <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="android.studio@android.com"-->
-            <!--android:id="@+id/textView"/>-->
 
 </LinearLayout>
