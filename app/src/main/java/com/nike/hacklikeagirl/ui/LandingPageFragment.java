@@ -2,8 +2,11 @@ package com.nike.hacklikeagirl.ui;
 
 import com.nike.hacklikeagirl.R;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,6 +48,10 @@ public class LandingPageFragment extends Fragment {
             Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_landing_page, container, false);
+
+        getActivity().setTitle(getString(R.string.app_name));
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color
+                .parseColor("#bedb39")));
 
         mVideoButton = (ImageButton) view.findViewById(R.id.video1);
         mVideoButton.setOnClickListener(new View.OnClickListener() {

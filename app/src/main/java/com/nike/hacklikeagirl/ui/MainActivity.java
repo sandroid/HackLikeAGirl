@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.flContent, LandingPageFragment.newInstance());
                 ft.commit();
+                getSupportActionBar().setTitle(getString(R.string.app_name));
                 drawer.closeDrawers();
             }
         });
