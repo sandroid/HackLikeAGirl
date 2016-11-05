@@ -4,38 +4,25 @@
 
     <group android:checkableBehavior="single">
         <item
-                android:id="@+id/nav_register"
-                app:actionLayout="@layout/custom_menu_item"
-                />
+                android:id="@+id/nav_stats"
+                app:actionLayout="@layout/custom_stats_item"
+                android:checkable="true"
+        />
         <item
-                android:id="@+id/nav_records"
+                android:id="@+id/nav_activity"
                 app:actionLayout="@layout/custom_activity_item"
                 />
         <item
                 android:id="@+id/nav_food"
                 app:actionLayout="@layout/custom_food_item"/>
+
+        <item
+                android:id="@+id/nav_market"
+                app:actionLayout="@layout/custom_market_item"/>
         <item
                 android:id="@+id/nav_friends"
                 app:actionLayout="@layout/custom_friends_item"/>
-        <item
-                android:id="@+id/nav_rewards"
-                app:actionLayout="@layout/custom_rewards_item"/>
-        <item
-                android:id="@+id/nav_video"
-                app:actionLayout="@layout/custom_video_item"/>
-    </group>
 
-    <!--<item android:title="Communicate">-->
-        <!--<menu>-->
-            <!--<item-->
-                    <!--android:id="@+id/nav_share"-->
-                    <!--android:icon="@drawable/ic_menu_share"-->
-                    <!--android:title="Share"/>-->
-            <!--<item-->
-                    <!--android:id="@+id/nav_send"-->
-                    <!--android:icon="@drawable/ic_menu_send"-->
-                    <!--android:title="Send"/>-->
-        <!--</menu>-->
-    <!--</item>-->
+    </group>
 
 </menu>

@@ -103,9 +103,9 @@ public class MainActivity extends AppCompatActivity
 
         int id = item.getItemId();
 
-        if (id == R.id.nav_register) {
+        if (id == R.id.nav_stats) {
             fragment = RegistrationFragment.newInstance();
-        } else if (id == R.id.nav_records) {
+        } else if (id == R.id.nav_activity) {
             fragment = MyMapFragment.newInstance("", "");
         } else if (id == R.id.nav_food) {
             fragment = WebviewFragment.newInstance();
@@ -116,8 +116,8 @@ public class MainActivity extends AppCompatActivity
 //
 //        } else if (id == R.id.nav_send) {
 
-        } else if (id == R.id.nav_video) {
-            FullScreenThreadVideoActivity.navigate(this, "http://cdn-vod-a.sesameonline.net/pd/p/1786071/sp/178607100/serveFlavor/entryId/0_dm4qkb4e/v/2/pv/1/flavorId/0_t7iwesxn/name/a.mp4", true);
+//        } else if (id == R.id.nav_video) {
+//            FullScreenThreadVideoActivity.navigate(this, "http://cdn-vod-a.sesameonline.net/pd/p/1786071/sp/178607100/serveFlavor/entryId/0_dm4qkb4e/v/2/pv/1/flavorId/0_t7iwesxn/name/a.mp4", true);
         }
 
         if (fragment != null) {

@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="horizontal"
               android:layout_width="match_parent"
-                android:background="#004358"
                 android:id="@+id/custom_menu_item"
+                android:background="?android:selectableItemBackgroundBorderless"
                 android:layout_height="50dp">
 
     <View
@@ -25,7 +25,7 @@
               android:textSize="24sp"
               android:textColor="#ffffff"
               android:layout_toRightOf="@id/icon"
-              android:text="Register"
+              android:background="?attr/selectableItemBackgroundBorderless"
               android:gravity="center"/>
 
 
