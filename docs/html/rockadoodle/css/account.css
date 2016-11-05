@@ -1,0 +1,55 @@
+body{
+  background-color: #334d5c;;
+}
+
+.icon{
+  height:150px;
+  width:150px;
+}
+
+.outer-box-left {
+    background: #45B29D;
+    padding-top: 1em;
+    width: 90%;
+}
+
+a{
+  color: #334d5c;
+}
+
+.text{
+  margin-bottom: 20px;
+}
+
+.outer-box-left span, .outer-box-right span{
+  margin-top: 10px;
+  font-weight: bold;
+  color: #09093C;
+}
+
+.ribbon{
+  width: 70px;
+}
+
+.points{
+  position: relative;
+  font-size: 24pt;
+  top: -65px;
+  position: relative;
+  top: -28px;
+}
+
+.challenge{
+  background-color: #ADFCF9;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  top: 30px;
+  font-size: 24pt;
+}
+
+.icon{
+  height: 200px;
+  width: 200px;
+  border: 0px transparent solid;
+}

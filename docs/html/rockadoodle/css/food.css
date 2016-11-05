@@ -1,0 +1,57 @@
+body{
+	background: #efc94c;
+
+}
+.outer-box-right, .outer-box-left {
+	background: #334d5c;
+	border-color: #df5a49;
+	color: white;
+}
+
+.icon{
+    border-radius: 50px;
+    border: 2px solid #df5a49;
+    background: #df5a49;
+}
+
+.game{
+	width: 85%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 5%;
+	margin-top: 5%;
+	background:  #334d5c; 
+	border-color: #df5a49;
+	color: white;
+	padding: 20px;
+
+	display: inline-block;
+
+	color: white;
+    display: inline-block;
+    border: 4px solid #df5a49;
+    border-radius: 15px;  
+
+
+    -webkit-box-shadow: 0px 0px 34px -1px rgba(86,80,81,1);
+	-moz-box-shadow: 0px 0px 34px -1px rgba(86,80,81,1);
+	box-shadow: 0px 0px 34px -1px rgba(86,80,81,1);
+	text-align: center;
+}
+
+.points{
+	font-size: .5em;
+	color: #DF5A49;
+	text-align: right;
+}
+
+a{
+	color: white;
+}
+
+.reward{
+	padding-top: 15px;
+	text-align: center;
+	font-size: 1em;
+	color: #e27a3f;
+}
