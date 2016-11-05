@@ -28,7 +28,7 @@
             android:text="Rockadoodle"
             android:textColor="#ffffff"
             android:textStyle="bold"
-            android:textSize="24sp"
+            android:textSize="36dp"
     />
 
     <!--<TextView-->

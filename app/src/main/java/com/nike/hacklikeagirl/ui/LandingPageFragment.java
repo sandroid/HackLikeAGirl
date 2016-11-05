@@ -45,7 +45,7 @@ public class LandingPageFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_landing_page, container, false);
 
         //Find the +1 button
-        mVideoButton = (Button) view.findViewById(R.id.plus_one_button);
+        mVideoButton = (Button) view.findViewById(R.id.video1);
         mVideoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
