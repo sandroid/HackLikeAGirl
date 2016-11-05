@@ -17,7 +17,7 @@
     <ImageView
             android:layout_width="70dp"
             android:layout_height="70dp"
-            app:srcCompat="@drawable/follow_me_huge"
+            app:srcCompat="@drawable/bird"
             android:layout_marginTop="20dp"
             android:id="@+id/imageView"/>
 

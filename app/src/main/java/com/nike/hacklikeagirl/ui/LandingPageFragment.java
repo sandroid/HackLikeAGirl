@@ -15,6 +15,8 @@ public class LandingPageFragment extends Fragment {
 
     private static final int PLUS_ONE_REQUEST_CODE = 0;
     private ImageButton mVideoButton;
+    private ImageButton mVideoButton2;
+    private ImageButton mVideoButton3;
 
 
     public LandingPageFragment() {
@@ -44,7 +46,6 @@ public class LandingPageFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_landing_page, container, false);
 
-        //Find the +1 button
         mVideoButton = (ImageButton) view.findViewById(R.id.video1);
         mVideoButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +54,23 @@ public class LandingPageFragment extends Fragment {
                         + ".net/pd/p/1786071/sp/178607100/serveFlavor/entryId/0_dm4qkb4e/v/2/pv/1/flavorId/0_t7iwesxn/name/a.mp4", true);
             }
         });
+
+        mVideoButton2 = (ImageButton) view.findViewById(R.id.video2);
+        mVideoButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FullScreenThreadVideoActivity.navigate(getActivity(), "http://video.cdn.schooltube.com/09d9f05c-d4df-424f-ba13-0898da2f157f/v/11/cf/bd/cc/f5/af/11cfbdcc-f5af-8be7-e6c7-9b6bafe576ca.mp4", true);
+            }
+        });
+
+        mVideoButton3 = (ImageButton) view.findViewById(R.id.video3);
+        mVideoButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FullScreenThreadVideoActivity.navigate(getActivity(), "http:\\/\\/www.dailymotion.com\\/cdn\\/H264-320x240\\/video\\/x1na8l6.mp4?auth=1478550444-2688-33km3r50-ec6c6b46edd828f31362e7db24fbd924", true);
+            }
+        });
+
 
         return view;
     }
