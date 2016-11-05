@@ -22,13 +22,15 @@ public class WebviewFragment extends Fragment {
 
     public static final String TITLE = "title";
     public static final String COLOR = "color";
+    public static final String URL = "url";
     private WebView mWebView;
 
-    public static WebviewFragment newInstance(String title, String color) {
+    public static WebviewFragment newInstance(String title, String color, String url) {
         WebviewFragment fragment = new WebviewFragment();
         Bundle bundle = new Bundle();
         bundle.putString(TITLE, title);
         bundle.putString(COLOR, color);
+        bundle.putString(URL, url);
         fragment.setArguments(bundle);
         return fragment;
     }
@@ -55,7 +57,7 @@ public class WebviewFragment extends Fragment {
         mWebView.getSettings().setLoadWithOverviewMode(true);
         mWebView.getSettings().setUseWideViewPort(true);
         mWebView.getSettings().setJavaScriptEnabled(true);
-        mWebView.loadUrl("https://wecode-nov2016s.splashthat.com/#settings");
+        mWebView.loadUrl(getArguments().getString(URL));
 
         // Enable Javascript
         WebSettings webSettings = mWebView.getSettings();

@@ -20,6 +20,12 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static final String STATS_URL = "http://wecode2016.stumptownsarah.com/food.html";
+    private static final String ACTIVITY_URL = "http://wecode2016.stumptownsarah.com/food.html";
+    private static final String FOOD_URL = "http://wecode2016.stumptownsarah.com/food.html";
+    private static final String MARKET_URL = "http://wecode2016.stumptownsarah.com/food.html";
+    private static final String FRIEDS_URL = "http://wecode2016.stumptownsarah.com/food.html";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,15 +111,16 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_stats) {
-            fragment = WebviewFragment.newInstance(getResources().getString(R.string.activity_stats), Constants.BLUE);
+            fragment = WebviewFragment.newInstance(getResources().getString(R.string.activity_stats), Constants.BLUE,
+                    STATS_URL);
         } else if (id == R.id.nav_activity) {
-            fragment = WebviewFragment.newInstance(getResources().getString(R.string.activity_log), Constants.GREEN);
+            fragment = WebviewFragment.newInstance(getResources().getString(R.string.activity_log), Constants.GREEN, ACTIVITY_URL);
         } else if (id == R.id.nav_food) {
-            fragment = WebviewFragment.newInstance(getResources().getString(R.string.food), Constants.YELLOW);
+            fragment = WebviewFragment.newInstance(getResources().getString(R.string.food), Constants.YELLOW, FOOD_URL);
         } else if (id == R.id.nav_market) {
-            fragment = WebviewFragment.newInstance(getResources().getString(R.string.market), Constants.ORANGE);
+            fragment = WebviewFragment.newInstance(getResources().getString(R.string.market), Constants.ORANGE, MARKET_URL);
         } else if (id == R.id.nav_friends) {
-            fragment = WebviewFragment.newInstance(getResources().getString(R.string.friends), Constants.SALMON);
+            fragment = WebviewFragment.newInstance(getResources().getString(R.string.friends), Constants.SALMON, FRIEDS_URL);
         }
 
         if (fragment != null) {

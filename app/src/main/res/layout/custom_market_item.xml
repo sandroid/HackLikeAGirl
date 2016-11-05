@@ -25,7 +25,7 @@
               android:textSize="24sp"
               android:textColor="#ffffff"
               android:layout_toRightOf="@id/icon"
-              android:text="Rewards"
+              android:text="Reward Zone"
               android:gravity="center"/>
 
 
