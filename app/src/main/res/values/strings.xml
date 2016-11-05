@@ -32,7 +32,7 @@
     <string name="activity_stats">Account Stats</string>
     <string name="activity_log">Activity Log</string>
     <string name="food">Food</string>
-    <string name="market">Market</string>
+    <string name="rewards">Reward Zone</string>
     <string name="friends">Friends</string>
 
 </resources>

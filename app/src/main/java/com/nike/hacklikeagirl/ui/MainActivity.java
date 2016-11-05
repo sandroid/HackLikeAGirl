@@ -23,7 +23,7 @@ import android.widget.LinearLayout;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private static final String STATS_URL = "http://wecode2016.stumptownsarah.com/food.html";
+    private static final String STATS_URL = "http://wecode2016.stumptownsarah.com/account.html";
     private static final String ACTIVITY_URL = "http://wecode2016.stumptownsarah.com/ActivityPage.html";
     private static final String FOOD_URL = "http://wecode2016.stumptownsarah.com/food.html";
     private static final String MARKET_URL = "http://wecode2016.stumptownsarah.com/rewardzone.html";
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_food) {
             fragment = WebviewFragment.newInstance(getResources().getString(R.string.food), Constants.YELLOW, FOOD_URL);
         } else if (id == R.id.nav_market) {
-            fragment = WebviewFragment.newInstance(getResources().getString(R.string.market), Constants.ORANGE, MARKET_URL);
+            fragment = WebviewFragment.newInstance(getResources().getString(R.string.rewards), Constants.ORANGE, MARKET_URL);
         } else if (id == R.id.nav_friends) {
             fragment = WebviewFragment.newInstance(getResources().getString(R.string.friends), Constants.SALMON, FRIEDS_URL);
         }
